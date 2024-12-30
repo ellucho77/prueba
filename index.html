@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compra de Bebidas y Combos</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+  <header class="bg-dark text-white py-3">
+    <div class="container text-center">
+      <h1>Compra de Bebidas y Combos</h1>
+      <p>¡Elige tus bebidas favoritas y disfruta!</p>
+    </div>
+  </header>
+
+  <main class="container my-4">
+    <!-- Catálogo de productos -->
+    <section id="catalogo" class="row gy-4"></section>
+
+    <!-- Resumen del carrito -->
+    <section class="my-4">
+      <div class="bg-light p-4 rounded shadow-sm">
+        <h2>Carrito</h2>
+        <div id="carrito" class="list-group mb-3"></div>
+        <div class="d-flex justify-content-between">
+          <strong>Total: $<span id="totalCarrito">0</span></strong>
+          <button class="btn btn-primary" id="finalizarCompra" data-bs-toggle="modal" data-bs-target="#vueltoModal">Finalizar Compra</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Historial de compras -->
+    <section class="my-4">
+      <div class="bg-light p-4 rounded shadow-sm">
+        <h2>Historial de Compras</h2>
+        <ul id="historial" class="list-group"></ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal para calcular el vuelto -->
+  <div
+    class="modal fade"
+    id="vueltoModal"
+    tabindex="-1"
+    aria-labelledby="vueltoModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="vueltoModalLabel">Cierre de Compra</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <p>El total de la compra es: <strong>$<span id="modalTotal"></span></strong></p>
+          <label for="dineroDado" class="form-label">Dinero entregado:</label>
+          <input
+            type="number"
+            id="dineroDado"
+            class="form-control"
+            placeholder="Ingresa la cantidad de dinero"
+          />
+          <p class="mt-3">
+            Vuelto a entregar: <strong>$<span id="vueltoCalculado">0</span></strong>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Cerrar
+          </button>
+          <button
+            type="button"
+            class="btn btn-success"
+            id="confirmarCompra"
+          >
+            Confirmar y Guardar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <p>© 2024 Tienda de Bebidas. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="scripts/index.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  ></script>
+</body>
+</html>

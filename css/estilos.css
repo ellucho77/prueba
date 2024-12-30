@@ -1,0 +1,82 @@
+/* Estilo global */
+body {
+    background-color: #f8f9fa;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Header */
+  header {
+    background: linear-gradient(90deg, #343a40, #495057);
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  header p {
+    font-size: 1.1rem;
+    margin: 0;
+  }
+  
+  /* Catálogo */
+  #catalogo .card {
+    border: none;
+    transition: transform 0.2s;
+  }
+  
+  #catalogo .card:hover {
+    transform: scale(1.05);
+  }
+  
+  #catalogo .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #495057;
+  }
+  
+  #catalogo .btn-success {
+    background-color: #198754;
+    border: none;
+  }
+  
+  #catalogo .btn-success:hover {
+    background-color: #157347;
+  }
+  
+  /* Carrito */
+  #carrito .list-group-item {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+  }
+  
+  #carrito .btn-danger {
+    font-size: 0.8rem;
+  }
+  
+  /* Historial */
+  #historial .list-group-item {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+  }
+  
+  #historial ul {
+    margin: 0;
+    padding-left: 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  #historial strong {
+    color: #343a40;
+  }
+  
+  /* Footer */
+  footer {
+    background: linear-gradient(90deg, #495057, #343a40);
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  
